@@ -25,5 +25,14 @@ de busca no site. No dataset é composto das seguintes variáveis:
 
 ### Sistema de Classificação
 
+O modelo de classificação é realizado por um modelo de `RandomForestClassifer`
+do `scikit-learn`. Ele é utilizado através do script `main.py`. Para utilizar
+o classificador devemos utilizar o parâmetro `-c` ou `--category` junto com
+um string como se fosse um dicionário, com as chaves **title**, **concatenated_tags**,
+**price**, **weight** e **minimum_quantity**. Essas são as variáveis dos dados
+originais que foram utilizadas para treinar o modelo. Exemplificando a
+utilização o modelo:
+
+```python main.py --category "{'title': 'Saída de maternidade masculino', 'concatenated_tags': 'bebe menino maternidade roupa', 'price': 70, 'weight': 30, 'minimum_quantity': 1}"```
 
 ### Sistema de Recomendação

@@ -49,3 +49,10 @@ categoria majoritária e série de ids e títulos recomendados. A utilização p
 ser feita com o seguinte comando:
 
 ````main.py --recommendation "<produto>"``
+
+
+## Setup
+
+O setup do ambiente para a excuçao do código pode ser realizado através da
+utilização do `python 3.X` e o gestor de pacotes `pip`. Com pip a lista de
+dependências contidas no arquivo `requirement.txt` pode ser baixada e instalada.

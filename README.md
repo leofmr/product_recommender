@@ -36,3 +36,16 @@ utilização o modelo:
 ```python main.py --category "{'title': 'Saída de maternidade masculino', 'concatenated_tags': 'bebe menino maternidade roupa', 'price': 70, 'weight': 30, 'minimum_quantity': 1}"```
 
 ### Sistema de Recomendação
+
+O sistema de recomendação gera 10 produtos a partir de uma query. Os produtos
+selecionados são aquele cujo os títulos são os de menor distância de edição em
+relação à query. De uma certa forma pode ser considerado como um sistema de
+recomendação baseado no conteúdo dos itens.
+
+Além de selecionar os produtos mais parecidos com a query, essa funcionalidade
+aplica o modelo de classificação de categorias aos registros selecionados pela
+query e identifica a categoria majoritária. Como resultado são printados, a
+categoria majoritária e série de ids e títulos recomendados. A utilização pode
+ser feita com o seguinte comando:
+
+````main.py --recommendation "<produto>"``

@@ -48,7 +48,7 @@ query e identifica a categoria majoritária. Como resultado são printados, a
 categoria majoritária e série de ids e títulos recomendados. A utilização pode
 ser feita com o seguinte comando:
 
-````main.py --recommendation "<produto>"``
+```main.py --recommendation "<produto>"```
 
 
 ## Setup

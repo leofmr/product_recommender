@@ -1,7 +1,16 @@
+from typing import Any
 from scipy import stats
 import pandas as pd
 
-def series_mode(serie: pd.Series):
+def series_mode(serie: pd.Series) -> Any:
+    """Retorna a moda de uma série
+
+    Args:
+        serie (pd.Series): série de dados
+
+    Returns:
+        Any: item mais frequente da série
+    """    
     return stats.mode(serie)[0][0]
 
 def remove_duplicates(df: pd.DataFrame,

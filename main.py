@@ -1,6 +1,7 @@
 import joblib
 
 from src import utils, recommender_system
+# essas funções são necessárias por conta do modelo
 from src.clf_model import select_txt, select_base_features
 
 

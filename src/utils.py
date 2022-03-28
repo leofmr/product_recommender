@@ -2,8 +2,12 @@ import pandas as pd
 import argparse
 import ast
 
-def load_data():
-    """Carrega os dados"""
+def load_data() -> pd.DataFrame:
+    """Carrega os dados de queries
+
+    Returns:
+        pd.DataFrame: dados das queries
+    """    
     df = pd.concat([
         pd.read_pickle("data/train_query.pickle"),
         pd.read_pickle("data/test_query.pickle")

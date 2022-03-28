@@ -57,3 +57,16 @@ def custom_tokenizer(text: str) -> list[str]:
                  if token not in stopwords and len(token) > 2]
     
     return [remove_accents(stem) for stem in stem_list]
+
+def preprocess_txt(txt: str) -> str:
+    """Executa o pre-processamento textual padrão
+
+    Args:
+        txt (str): texto a ser preproessado
+
+    Returns:
+        str: texto padronizado
+    """
+    cleaned_txt = clean_text(txt)
+    token_txt = custom_tokenizer(cleaned_txt)
+    return " ".join(token_txt)

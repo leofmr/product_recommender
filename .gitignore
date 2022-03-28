@@ -1,2 +1,3 @@
 Pipfile*
 *.pyc
+*.ipynb_checkpoints

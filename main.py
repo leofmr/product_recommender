@@ -1,4 +1,5 @@
 import joblib
+import pandas as pd
 
 from src import utils, recommender_system
 # essas funções são necessárias por conta do modelo
@@ -16,9 +17,11 @@ def main():
         print(product_category)
     if query is not None:
         df = utils.load_data()
+        prod_titles = pd.read_pickle(r"assets\prod_titles.pickle")
         recommender_system.main(query=query,
                                 data=df,
-                                clf_model=rf_clf_pipeline)
+                                prod_titles=prod_titles,
+                                clf_pipeline=rf_clf_pipeline)
     
 
 if __name__ == "__main__":

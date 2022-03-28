@@ -50,15 +50,17 @@ def get_top_prods(query: str,
         return selected_prods.index.tolist()
     
 
-def main(query: str, data: pd.DataFrame, clf_pipeline: Pipeline) -> None:
+def main(query: str, data: pd.DataFrame,
+         prod_titles: pd.DataFrame, clf_pipeline: Pipeline) -> None:
     """Realiza a rotina principal do sistema de recomendação
 
     Args:
         query (str): query buscada
         data (pd.DataFrame): dados de querys
+        prod_titles (pd.DataFrame): dados de títulos pré-processados base para
+        a recomendação
         clf_pipeline (Pipeline): pipeline de classificação
-    """      
-    prod_titles = preprocess_title_data(data=data)
+    """
     selected_ids = get_top_prods(query=query,
                                  prod_titles=prod_titles,
                                  get_titles=False)

@@ -56,3 +56,19 @@ ser feita com o seguinte comando:
 O setup do ambiente para a excuçao do código pode ser realizado através da
 utilização do `python 3.X` e o gestor de pacotes `pip`. Com pip a lista de
 dependências contidas no arquivo `requirement.txt` pode ser baixada e instalada.
+
+Adicionalmente, após ter instalado todos os pacotes do requirements, caso ainda
+não tenha baixado os modelos do NLTK, eles precisaram ser baixados. Os itens
+baixados são: `stopwords`, `punkt` e `rslp`. Eles podem ser baixados executando
+os seguintes comandos python:
+
+```{python}
+import nltk
+
+# listas de stopwords
+nltk.download('stopwords')
+# tokenização
+nltk.download('punkt')
+# stemming
+nltk.download('rslp')
+```
